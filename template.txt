@@ -1,0 +1,92 @@
+1- component oluştururken bu template'i kullan
+2- file ve folder nameler hepsi-kucuk-harf
+3- bir component sadece bir pagede kullanılıyorsa page-components altına
+   birden fazla pagede kullanılıyorsa direk components altına yazılmalıdır
+4- file folder name dışındaki isimlendirmeler:
+    eğer type ise TypeName , component name : ComponentName
+    fonksion veya variable ise variableName
+
+5- component export ederken default export değil , export const ComponentName olucak
+6- style sistemi index.js içerisinde var bu style sistemi react-nativedede kullnaılıyor bu nedenle hızlı adapte edeceğiz
+
+
+
+
+
+import React, { useCallback } from 'react';
+
+// React Native
+import { Keyboard } from 'react-native';
+
+// Third-Party
+import produce from 'immer';
+
+// Components
+
+
+// State Management
+
+
+// Hooks & Utilities
+
+// Types
+
+
+// Styling
+
+
+/*
+ * Component
+ */
+
+const componentContext = 'CreateDataEntityTab';
+
+export type CreateDataEntityTabProps = {
+};
+
+export const CreateDataEntityTab = (props: CreateDataEntityTabProps): JSX.Element => {
+  const logContext = componentContext;
+  log.start(logContext);
+
+  /*
+   * Hooks
+   */
+
+  /*
+   * UI Event Handling
+   */
+
+  /*
+   * Values for rendering
+   */
+
+  /*
+   * Rendering
+   */
+
+   return <></>;
+};
+
+/*
+ * Style Sheet
+ */
+
+const styles = StyleSheet.create({
+  root: {
+    width: 80,
+    height: 60,
+    background: "black",
+    ":hover": {
+      background: "black",
+    },
+  },
+
+  title: {
+    marginLeft: 5,
+    color: "black",
+    fontSize: 22,
+    ":hover": {
+      color: "white",
+    },
+  },
+});
