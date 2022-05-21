@@ -1,4 +1,4 @@
-import { AUTH, IAuthState, IAuthCheckAction } from 'store/auth/types'
+import { AUTH, IAuthState, IAuthCheckAction } from './types'
 
 const initialState: IAuthState = {
   isAuth: false,

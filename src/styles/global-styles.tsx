@@ -5,26 +5,25 @@ export function createGlobalStyles() {
     color: createColorStyles(),
     layout: createLayoutStyles(),
     text: createTypographyStyles(),
+    ul: createListStyles(),
   };
 }
 
-export function createLayoutStyles(theme: Theme) {
+export function createLayoutStyles() {
   return StyleSheet.create({
     screenView: {
       flex: 1,
-      padding: theme.sizing.scale500,
-      color: theme.colors.primary,
-      backgroundColor: theme.colors.primaryB,
+      padding: 10,
+  
     },
     scrollViewFlexFix: {
       flexGrow: 1,
       flex: 0,
     },
     contentView: {
-      padding: theme.sizing.scale500,
+      padding: 10,
       width: "100%",
-      color: theme.colors.primary,
-      backgroundColor: theme.colors.primaryB,
+    
     },
     centerRow: {
       display: "flex",
@@ -61,14 +60,26 @@ export function createLayoutStyles(theme: Theme) {
     row: {
       flexDirection: "row",
     },
+    flexStartColumn:{
+       display: "flex",
+       flexDirection:"column",
+       justifyContent: "center",
+       alignItems:"flex-start"
+    },
+    spaceBetweenColumn:{
+     display: "flex",
+     flexDirection:"column",
+     justifyContent: "space-between",
+     alignItems:"center"
+    },
 
     relative: {
       position: "relative",
     },
     rightTop: {
       position: "absolute",
-      top: theme.sizing.scale500,
-      right: theme.sizing.scale500,
+      top: 10,
+      right: 10,
     },
     f1: {
       flex: 1,
@@ -113,185 +124,186 @@ export function createLayoutStyles(theme: Theme) {
 
     fullHeight: { height: "100%" },
     h1: {
-      height: theme.sizing.scale500,
+      height: 10,
     },
     h2: {
-      height: theme.sizing.scale800,
+      height: 20,
     },
     h3: {
-      height: theme.sizing.scale950,
+      height: 16,
     },
     w1: {
-      width: theme.sizing.scale500,
+      width: 10,
     },
     w2: {
-      width: theme.sizing.scale800,
+      width: 20,
     },
     w3: {
-      width: theme.sizing.scale950,
+      width: 16,
     },
 
     m1: {
-      margin: theme.sizing.scale100,
+      margin: 4,
     },
     m2: {
-      margin: theme.sizing.scale300,
+      margin: 8,
     },
     m3: {
-      margin: theme.sizing.scale500,
+      margin: 10,
     },
     mv1: {
-      marginVertical: theme.sizing.scale100,
+      marginVertical: 4,
     },
     mv2: {
-      marginVertical: theme.sizing.scale300,
+      marginVertical: 8,
     },
     mv3: {
-      marginVertical: theme.sizing.scale500,
+      marginVertical: 10,
     },
     mv4: {
-      marginVertical: theme.sizing.scale600,
+      marginVertical: 12,
     },
     mv6: {
-      marginVertical: theme.sizing.scale800,
+      marginVertical: 20,
     },
     mh1: {
-      marginHorizontal: theme.sizing.scale100,
+      marginHorizontal: 4,
     },
     mh2: {
-      marginHorizontal: theme.sizing.scale300,
+      marginHorizontal: 8,
     },
     mh3: {
-      marginHorizontal: theme.sizing.scale500,
+      marginHorizontal: 10,
     },
     mr1: {
-      marginRight: theme.sizing.scale100,
+      marginRight: 4,
     },
     mr2: {
-      marginRight: theme.sizing.scale300,
+      marginRight: 8,
     },
     mr3: {
-      marginRight: theme.sizing.scale500,
+      marginRight: 10,
     },
     p1: {
-      padding: theme.sizing.scale100,
+      padding: 4,
     },
     p2: {
-      padding: theme.sizing.scale300,
+      padding: 8,
     },
     p3: {
-      padding: theme.sizing.scale500,
+      padding: 10,
     },
     pv1: {
-      paddingVertical: theme.sizing.scale100,
+      paddingVertical: 4,
     },
     pv2: {
-      paddingVertical: theme.sizing.scale300,
+      paddingVertical: 8,
     },
     pv3: {
-      paddingVertical: theme.sizing.scale500,
+      paddingVertical: 10,
     },
     pv4: {
-      paddingVertical: theme.sizing.scale600,
+      paddingVertical: 12,
     },
     pv5: {
-      paddingVertical: theme.sizing.scale700,
+      paddingVertical: 16,
     },
     ph1: {
-      paddingHorizontal: theme.sizing.scale100,
+      paddingHorizontal: 4,
     },
     ph2: {
-      paddingHorizontal: theme.sizing.scale300,
+      paddingHorizontal: 8,
     },
     ph3: {
-      paddingHorizontal: theme.sizing.scale500,
+      paddingHorizontal: 10,
     },
     ph4: {
-      paddingHorizontal: theme.sizing.scale600,
+      paddingHorizontal: 12,
     },
     ph5: {
-      paddingHorizontal: theme.sizing.scale700,
+      paddingHorizontal: 16,
     },
     ph6: {
-      paddingHorizontal: theme.sizing.scale800,
+      paddingHorizontal: 20,
     },
+    noPadding:{
+      padding: 0,
+    },
+    w100:{
+     width: "100%",
+    }
   });
 }
 
-export function createTypographyStyles(theme: Theme) {
+export function createTypographyStyles() {
   return StyleSheet.create({
     // headingXlarge: 28px , headingLarge : 24px , headingMedium :20px,  headingSmall :16px , headingXSmall : 12px
 
     displayLarge: {
-      color: theme.colors.primary,
-      ...theme.text.displayLarge,
+     
+   
     },
     displayMedium: {
-      color: theme.colors.primary,
-      ...theme.text.displayMedium,
+     
+     
     },
     displaySmall: {
-      color: theme.colors.primary,
-      ...theme.text.displaySmall,
+     
+     
     },
     headingXLarge: {
-      color: theme.colors.primary,
-      ...theme.text.headingXLarge,
+     
+     
     },
     headingLarge: {
-      color: theme.colors.primary,
-      ...theme.text.headingLarge,
+     
+  
     },
     headingMedium: {
-      color: theme.colors.primary,
-      ...theme.text.headingMedium,
+     
+      
     },
     headingSmall: {
-      color: theme.colors.primary,
-      ...theme.text.headingSmall,
-    },
+     
+          },
     headingXSmall: {
-      color: theme.colors.primary,
-      ...theme.text.headingXSmall,
+     
+      
     },
 
     labelLarge: {
-      color: theme.colors.primary,
-      ...theme.text.labelLarge,
-    },
+     
+      },
     labelMedium: {
-      color: theme.colors.primary,
-      ...theme.text.labelMedium,
-    },
+     
+         },
     labelSmall: {
-      color: theme.colors.primary,
-      ...theme.text.labelSmall,
-    },
+     
+      },
     labelXSmall: {
-      color: theme.colors.primary,
-      ...theme.text.labelXSmall,
-    },
+     
+         },
     paragraphLarge: {
-      color: theme.colors.primary400,
-      ...theme.text.paragraphLarge,
+   
+   
     },
     paragraphMedium: {
-      color: theme.colors.primary400,
-      ...theme.text.paragraphMedium,
+   
+    
     },
     paragraphSmall: {
-      color: theme.colors.primary400,
-      ...theme.text.paragraphSmall,
+   
+    
     },
 
     disabled: {
-      color: theme.colors.primary400,
+     
     },
 
     // Based on baseweb instructions => accent:blue , negative:red , positive:green
 
     accent: {
-      color: theme.colors.accent300,
+     
     },
     center: {
       textAlign: "center",
@@ -299,94 +311,32 @@ export function createTypographyStyles(theme: Theme) {
   });
 }
 
-export function createColorStyles(theme: Theme) {
+export function createColorStyles() {
   return StyleSheet.create({
     primary: {
-      color: theme.colors.primary,
+      color: "white",
     },
 
-    primaryA: {
-      color: theme.colors.primaryA,
+    secondary: {
+      color: "black",
     },
-    primaryB: {
-      color: theme.colors.primaryB,
-    },
-
-    primary300: {
-      color: theme.colors.primary300,
-    },
-    primary400: {
-      color: theme.colors.primary400,
-    },
-
-    // Accent Palette - blue
-    accent: {
-      color: theme.colors.accent,
-    },
-
-    accent300: {
-      color: theme.colors.accent300,
-    },
-
-    // Negative Palette - red
-    negative: {
-      color: theme.colors.negative,
-    },
-
-    negative300: {
-      color: theme.colors.negative300,
-    },
-
-    // Warning Palette -yellow
-    warning: {
-      color: theme.colors.warning,
-    },
-
-    warning300: {
-      color: theme.colors.warning300,
-    },
-
-    // Positive Palette - green
-    positive: {
-      color: theme.colors.positive,
-    },
-
-    positive300: {
-      color: theme.colors.positive300,
-    },
-
-    // Monochrome Palette
-    white: {
-      color: theme.colors.white,
-    },
-    black: {
-      color: theme.colors.black,
-    },
-    mono100: {
-      color: theme.colors.mono100,
-    },
-
-    mono300: {
-      color: theme.colors.mono300,
-    },
-    mono400: {
-      color: theme.colors.mono400,
-    },
-    mono500: {
-      color: theme.colors.mono500,
-    },
-
-    appleBlue: {
-      color: theme.colors.accent300,
-    },
+    
     backgroundPrimary: {
-      backgroundColor: theme.colors.primaryA,
+      background: "#100c08",
     },
+
+    
     backgroundSecondary: {
-      backgroundColor: theme.colors.primaryB,
+      backgroundColor: "#353839",
     },
-    backgroundPrimary400: {
-      backgroundColor: theme.colors.primary400,
-    },
+  
+  });
+}
+export function createListStyles(){
+  return StyleSheet.create({
+   noBulltet:{
+     listStyle: "none",
+   }
+   
   });
 }

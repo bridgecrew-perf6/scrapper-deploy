@@ -10,20 +10,16 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunkMiddleware from "redux-thunk";
 import { createWrapper, MakeStore, HYDRATE } from "next-redux-wrapper";
 
-import { auth } from "store/auth/reducers";
-import { show } from "store/show/reducers";
-import { tasks } from "store/tasks/reducers";
-import { teams } from "store/teams/reducers";
+import { auth } from "../store/auth/reducers";
+
 
 export interface AppState {
-  counter: CounterState;
+  counter: any;
 }
 
 const combinedReducers = combineReducers({
   auth,
-  show,
-  tasks,
-  teams,
+
 });
 
 const reducer: Reducer<AppState, AnyAction> = (state, action) => {
